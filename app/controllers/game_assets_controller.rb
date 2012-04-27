@@ -38,8 +38,6 @@ class GameAssetsController < ApplicationController
   # GET /game_assets/1/edit
   def edit
     @game_asset = GameAsset.find(params[:id])
-    
-    
   end
 
   # POST /game_assets
@@ -65,6 +63,12 @@ class GameAssetsController < ApplicationController
 
     respond_to do |format|
       if @game_asset.update_attributes(params[:game_asset])
+        Pusher['game_assets'].trigger(
+          'updated',
+          @game_asset.to_json,
+          request.headers['X-Pusher-Socket-ID']
+        )
+
         format.html { redirect_to character_path(@game_asset.character), notice: 'Game asset was successfully updated.' }
         format.json { head :ok }
       else

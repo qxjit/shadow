@@ -7,6 +7,10 @@ class window.AppView extends Backbone.View
     Characters.fetch()
     GameAssets.fetch()
 
+    pusher = new Pusher PusherKey
+    channel = pusher.subscribe 'game_assets'
+    new Backpusher channel, GameAssets
+
   render: ->
     $(this.el).html(JST['templates/app_view']())
     this.$('#nav').append new CharacterList().el

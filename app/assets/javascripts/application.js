@@ -9,6 +9,7 @@
 //= require underscore
 //= require backbone
 //= require haml
+//= require backpusher
 //= require_tree .
 
 

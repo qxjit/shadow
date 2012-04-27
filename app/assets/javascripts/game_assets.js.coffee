@@ -27,7 +27,10 @@ class window.GameAssetView extends Backbone.View
   events:
     'change input.equipped': 'updateEquipped'
 
-  render: ->
+  initialize: ->
+    this.model.on 'change', this.render
+
+  render: =>
     $(this.el).html(JST['templates/game_asset'](
       game_asset: this.model
     ))
