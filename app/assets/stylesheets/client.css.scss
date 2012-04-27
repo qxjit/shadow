@@ -1,0 +1,62 @@
+html, body {
+  height: 100%;
+}
+
+#client h1 {
+  margin-bottom: 10px;
+}
+
+#client {
+  padding: 15px;
+}
+
+#client li {
+  list-style: none;
+}
+
+#client #nav {
+  float: left;
+  width: 120px;
+}
+
+#client #characters {
+  border: 1px solid black;
+  background: #9BB;
+}
+
+#client #characters li {
+  padding: 5px 10px;
+  overflow: hidden;
+}
+
+#client #characters li:hover {
+  cursor: pointer;
+  background: #CEE;
+}
+
+#client #detail {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  left: 160px;
+  bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  overflow: auto;
+}
+
+#ajax-indicator {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 20px;
+  padding: 5px;
+  border-width: 0px 0px 1px 1px;
+  border-style: none;
+}
+
+#ajax-indicator.ajax-running {
+  background: #dee;
+  border-color: black;
+}

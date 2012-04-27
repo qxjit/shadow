@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem 'rake', '0.9.2'
 gem 'jquery-rails'
 gem 'haml', '~> 3.0'
+gem 'haml-sprockets'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'

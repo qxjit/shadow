@@ -5,6 +5,7 @@ Shadow::Application.routes.draw do
   resources :characters
   resources :game_assets
   match 'gmview' => 'characters#gmview'
+  get 'client' => 'client#show'
 
 
   # The priority is based upon order of creation:

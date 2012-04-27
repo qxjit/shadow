@@ -1,0 +1,7 @@
+#client
+  %h1 Shadowrun
+
+  .main
+    #nav
+    #detail
+

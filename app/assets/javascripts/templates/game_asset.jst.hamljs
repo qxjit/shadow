@@ -1,0 +1,10 @@
+%td= game_asset.get("name")
+%td= game_asset.get("amount")
+%td= game_asset.get("price")
+%td
+  - if (game_asset.get("equipped")) {
+  %input.equipped{type: "checkbox", checked: true}
+  - } else {
+  %input.equipped{type: "checkbox"}
+  - }
+%td= game_asset.get("legality")

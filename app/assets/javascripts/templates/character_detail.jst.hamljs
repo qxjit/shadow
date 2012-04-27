@@ -1,0 +1,10 @@
+%h1= character.get("name")
+
+%ul
+  %li
+    Perception: #{character.get("perception")}
+
+  %li
+    Surprise: #{character.get("surprise")}
+
+.game-assets
